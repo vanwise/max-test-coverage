@@ -3,6 +3,11 @@ import org.junit.Test
 
 class CalcCommissionTest {
     @Test
+    fun mainShouldReturnUnit() {
+        assertEquals(Unit, main())
+    }
+
+    @Test
     fun calcCommissionShouldReturnZero() {
         val result = calcCommission(200, "vk-pay", 0)
         assertEquals(0.0, result, 0.0001)
