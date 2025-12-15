@@ -9,7 +9,13 @@ class CalcCommissionTest {
 
     @Test
     fun calcCommissionShouldReturnZero() {
-        val result = calcCommission(200, "vk-pay", 0)
+        val result = calcCommission(200, "vk-pay", 200)
+        assertEquals(0.0, result, 0.0001)
+    }
+
+    @Test
+    fun calcCommissionShouldReturnZeroWithZeroString() {
+        val result = calcCommission(0, "", 0)
         assertEquals(0.0, result, 0.0001)
     }
 
