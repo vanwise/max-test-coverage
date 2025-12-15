@@ -1,5 +1,5 @@
 fun main() {
-
+    calcCommission(200, "visa", 0)
 }
 
 fun calcCommission(amount: Int, cardType: String, totalMonthAmount: Int) = when (cardType) {
@@ -22,7 +22,7 @@ fun calcMastercardCommission(amount: Int, totalMonthAmount: Int): Double {
     val minMonthLimit = 300
     val maxMonthLimit = 75_000
 
-    val totalAmount  = totalMonthAmount + amount
+    val totalAmount = totalMonthAmount + amount
 
     return if (totalAmount < minMonthLimit || totalAmount > maxMonthLimit) {
         amount * commissionPercent / 100 + requiredCommission
