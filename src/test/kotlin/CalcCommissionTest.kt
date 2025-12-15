@@ -21,7 +21,7 @@ class CalcCommissionTest {
 
     @Test
     fun calcCommissionShouldReturnCorrectCommissionsWithVisa() {
-        val result = calcCommission(5200, "visa", 0)
+        val result = calcCommission(5200, "visa", 1)
         assertEquals(39.0, result, 0.0001)
     }
 

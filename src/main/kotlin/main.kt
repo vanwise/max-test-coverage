@@ -1,5 +1,9 @@
 fun main() {
     calcCommission(200, "visa", 0)
+    calcCommission(2200, "mir", 30)
+    calcCommission(2100, "mastercard", 10)
+    calcCommission(20, "maestro", 100)
+    calcCommission(2230, "vk-pay", 0)
 }
 
 fun calcCommission(amount: Int, cardType: String, totalMonthAmount: Int) = when (cardType) {
